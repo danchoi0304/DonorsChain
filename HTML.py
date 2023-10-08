@@ -1,0 +1,125 @@
+from DC_Functions.Folder_Move import *
+
+# Define the HTML content with links to social media
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnorsChain Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Style for links */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0077b6; /* Link color */
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #00557a; /* Link color on hover */
+        }
+
+        /* Add margin on left and right for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bookname</h1>
+        <p>Tracking provided by DonorsChain</p>
+    </header>
+
+    <div class="gallery">
+        <img src="https://covers.openlibrary.org/b/isbn/9780385533225-L.jpg">
+    </div>
+
+    <!-- Links with styles applied -->
+    <ul>
+        <li><a href="https://bm.sunykorea.ac.kr/bm/html/sub02/0201.html?mode=V&mng_no=bd9450a4e07706dd8f3bae0aebbb881c">Donor Information</a></li>
+        <li><a href="https://ipfs.io/ipfs/QmenN8Vx2Nu5ZK7WkWncScgRzEgmsxnVuP3XxParxv8xgG?filename=antmap.html">Tracking</a></li>
+    </ul>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Located in Ithaca, NY, our blockchain architecture enables transparent and efficient donations for Tompkins County residents.</p>
+    </section>
+    
+    <section>
+        <h2>Services</h2>
+        <ul>
+            <li>BlockChain-based tracking service</li>
+            <li>And more!</li>
+        </ul>
+    </section>
+
+    <footer>
+        Provided by DonorsChain
+    </footer>
+</body>
+</html>
+"""
+
+# Save the HTML content to a file
+with open("basic.html", "w") as html_file:
+    html_file.write(html_content)
+move_to_outputs("basic.html")
+
