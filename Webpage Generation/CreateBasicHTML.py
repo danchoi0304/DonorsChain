@@ -1,6 +1,6 @@
-from DC_Functions.Folder_Move import *
-
-# Define the HTML content with links to social media
+import shutil 
+import os
+ 
 html_content = """
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +85,7 @@ html_content = """
 <body>
     <header>
         <h1>Bookname</h1>
-        <p>Tracking provided by DonorsChain</p>
+        <p>Book and Donor Information Provided by DonorsChain</p>
     </header>
 
     <div class="gallery">
@@ -95,24 +95,28 @@ html_content = """
     <!-- Links with styles applied -->
     <ul>
         <li><a href="https://bm.sunykorea.ac.kr/bm/html/sub02/0201.html?mode=V&mng_no=bd9450a4e07706dd8f3bae0aebbb881c">Donor Information</a></li>
-        <li><a href="https://ipfs.io/ipfs/QmenN8Vx2Nu5ZK7WkWncScgRzEgmsxnVuP3XxParxv8xgG?filename=antmap.html">Tracking</a></li>
     </ul>
 
-    <section>
+    <section style = "text-align:center">
         <h2>About Us</h2>
         <p>Located in Ithaca, NY, our blockchain architecture enables transparent and efficient donations for Tompkins County residents.</p>
     </section>
-    
-    <section>
-        <h2>Services</h2>
+
+    <section style = "text-align:center">
+        <h2>What we do</h2>
         <ul>
-            <li>BlockChain-based tracking service</li>
-            <li>And more!</li>
+            <li>IPFS (InterPlanetary File System) is a peer-to-peer distributed file system that aims to connect all computing devices with the same system of files.</li>
+            <li>Unlike traditional file storage systems, which rely on central servers, IPFS uses a decentralized approach, making it more resilient and efficient.</li>
+            <li>Files in IPFS are uniquely identified by a cryptographic hash, ensuring content integrity and versioning.</li>
+            <li>With IPFS, one can ensure that files uploaded will not have a single chance of being mutated, since the change will cause the hash (CID) to change.</li>
+            <li>DonorsChain, funded by Ithaca Public Education Initiative, aims to provide cleaner donation with IPFS to Tomkins County Residents.</li>
         </ul>
     </section>
 
-    <footer>
-        Provided by DonorsChain
+    <footer style = "text-align:center">
+        <p>Provided by DonorsChain</p>
+        <img src="https://i.ibb.co/LZ8D6cn/IPEI-logo-removebg-preview-1.png">
+        <p>Funded by IPEI</p>
     </footer>
 </body>
 </html>
@@ -121,5 +125,16 @@ html_content = """
 # Save the HTML content to a file
 with open("basic.html", "w") as html_file:
     html_file.write(html_content)
-move_to_outputs("basic.html")
 
+# Source path 
+# Source path
+source = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\basic.HTML"
+  
+# Destination path 
+destination = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\outputs\\basic.HTML"
+
+# If the destination file already exists, remove it
+if os.path.exists(destination):
+    os.remove(destination)
+
+shutil.move(source, destination)
