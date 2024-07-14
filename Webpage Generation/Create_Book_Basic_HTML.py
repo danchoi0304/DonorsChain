@@ -108,7 +108,7 @@ html_content = """
             <li>IPFS (InterPlanetary File System) is a peer-to-peer distributed file system that aims to connect all computing devices with the same system of files.</li>
             <li>Unlike traditional file storage systems, which rely on central servers, IPFS uses a decentralized approach, making it more resilient and efficient.</li>
             <li>Files in IPFS are uniquely identified by a cryptographic hash, ensuring content integrity and versioning.</li>
-            <li>With IPFS, one can ensure that files uploaded will not have a single chance of being mutated, since the change will cause the hash (CID) to change.</li>
+            <li>With IPFS, one can ensure that files uploaded will not have a single chance of being mutated, since the change will cause the hash (CID) to become different.</li>
             <li>DonorsChain, funded by Ithaca Public Education Initiative, aims to provide cleaner donation with IPFS to Tomkins County Residents.</li>
         </ul>
     </section>
@@ -123,15 +123,15 @@ html_content = """
 """
 
 # Save the HTML content to a file
-with open("basic.html", "w") as html_file:
+with open("book_basic.html", "w") as html_file:
     html_file.write(html_content)
 
 # Source path 
 # Source path
-source = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\basic.HTML"
+source = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\book_basic.HTML"
   
 # Destination path 
-destination = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\outputs\\basic.HTML"
+destination = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\outputs\\book_basic.HTML"
 
 # If the destination file already exists, remove it
 if os.path.exists(destination):
