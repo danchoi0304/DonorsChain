@@ -7,7 +7,7 @@ html_content = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DnorsChain Tracking</title>
+    <title>DonorsChain Tracking</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -115,7 +115,7 @@ html_content = """
 
     <footer style = "text-align:center">
         <p>Provided by DonorsChain</p>
-        <img src="https://i.ibb.co/LZ8D6cn/IPEI-logo-removebg-preview-1.png">
+        <img src="https://i.ibb.co/sRtVs9N/IPEI-logo-removebg-preview-1.png">
         <p>Funded by IPEI</p>
     </footer>
 </body>
@@ -128,10 +128,10 @@ with open("book_basic.html", "w") as html_file:
 
 # Source path 
 # Source path
-source = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\book_basic.HTML"
+source = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\book_basic.html"
   
 # Destination path 
-destination = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\outputs\\book_basic.HTML"
+destination = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\outputs\\book_basic.html"
 
 # If the destination file already exists, remove it
 if os.path.exists(destination):

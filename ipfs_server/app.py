@@ -1,4 +1,4 @@
-from flask import Flask, request, send_from_directory, abort, render_template
+from flask import Flask, request, send_from_directory, abort, render_template_string
 import subprocess
 import os
 
@@ -25,8 +25,14 @@ def download():
         if not os.path.exists(file_path):
             abort(404, description="File not found")
 
-        # Render the HTML template with the CID
-        return render_template('download.html', cid=cid)
+        # Check the content of the file to determine if it should be rendered as HTML
+        if os.path.isfile(file_path) and file_path.endswith('.html'):
+            with open(file_path, 'r', encoding='utf-8') as file:
+                content = file.read()
+            return render_template_string(content)
+        else:
+            # Provide a link to download the file for non-HTML files
+            return f"File downloaded successfully. <a href='/downloaded_file?cid={cid}'>Download {cid}</a>"
     except subprocess.CalledProcessError:
         return "Failed to download file from IPFS", 500
 
@@ -52,4 +58,3 @@ def downloaded_file():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-
