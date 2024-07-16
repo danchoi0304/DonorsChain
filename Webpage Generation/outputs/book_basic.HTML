@@ -39,6 +39,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s;
         }
+        
 
         footer {
             text-align: center;
@@ -77,6 +78,13 @@
                 margin-right: 10px;
             }
         }
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+        .image-container img {
+            width: 200px; /* Adjust width as needed */
+            height: auto;
     </style>
 </head>
 <body>
@@ -96,7 +104,7 @@
 
     <section style = "text-align:center">
         <h2>About Us</h2>
-        <p>Located in Ithaca, NY, our blockchain architecture enables transparent and efficient donations for Tompkins County residents.</p>
+        <p>Located in Ithaca, NY, our decentralized architecture enables transparent and efficient donations for Tompkins County residents.</p>
     </section>
 
     <section style = "text-align:center">
@@ -114,6 +122,18 @@
         <p>Provided by DonorsChain</p>
         <img src="https://i.ibb.co/sRtVs9N/IPEI-logo-removebg-preview-1.png">
         <p>Funded by IPEI</p>
+        <br><br>
+        <p style = "text-align:center">Made With </p>
+        <div class="image-container">
+        <a href="https://ipfs.tech/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Ipfs-logo-1024-ice-text.png" alt="Image 1">
+        </a>
+        </div>
+        <div class="image-container">
+        <a href="https://cloudflare.com/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png" alt="Image 2">
+        </a>
+    </div>
     </footer>
 </body>
 </html>
