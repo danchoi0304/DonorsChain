@@ -7,7 +7,7 @@ html_content = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DonorsChain Tracking</title>
+    <title>DonorsChain</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -102,8 +102,16 @@ html_content = """
 
     <!-- Links with styles applied -->
     <ul>
-        <li><a href="https://bm.sunykorea.ac.kr/bm/html/sub02/0201.html?mode=V&mng_no=bd9450a4e07706dd8f3bae0aebbb881c">Donor Information</a></li>
+        <li><a href="https://donorschain.org/ipfs/QmSPoJfJmojvxtXDEfVKYtTxqGzk3XTs9Fw147QUspS5vW">Donor Information</a></li>
     </ul>
+
+    <div style="margin-top: 20px; font-size: 0.9em; color: #6e7f80; text-align:center">
+            <p>
+            <script>
+                document.write("Donation Timestamp: " + new Date().toLocaleString());
+            </script>
+            </p>
+    </div>
 
     <section style = "text-align:center">
         <h2>About Us</h2>

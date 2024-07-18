@@ -24,7 +24,7 @@ def get_cover(isbn):
 
 # Get user input
 donor = input("Enter donor: ")
-ISBNs = input("Enter ISBNs (separate by newline): ")
+ISBNs = input("Enter ISBNs (separate by space): ")
 
 # Split the input string into a list of ISBNs
 ISBN_list = ISBNs.strip().split()
