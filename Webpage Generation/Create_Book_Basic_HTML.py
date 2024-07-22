@@ -102,7 +102,7 @@ html_content = """
 
     <!-- Links with styles applied -->
     <ul>
-        <li><a href="https://donorschain.org/ipfs/QmSPoJfJmojvxtXDEfVKYtTxqGzk3XTs9Fw147QUspS5vW">Donor Information</a></li>
+        <li><a href="donor_SH.html">Donor Information</a></li>
     </ul>
 
     <div style="margin-top: 20px; font-size: 0.9em; color: #6e7f80; text-align:center">
@@ -131,7 +131,9 @@ html_content = """
 
     <footer style = "text-align:center">
         <p>Provided by DonorsChain</p>
-        <img src="https://i.ibb.co/sRtVs9N/IPEI-logo-removebg-preview-1.png">
+        <a href="https://www.ipei.org/">
+            <img src="https://www.ipei.org/new/wp-content/uploads/2015/12/IPEI-Sunburst-Logo-and-Name-e1452741505349.jpg" width="267" height="242">
+        </a>
         <p>Funded by IPEI</p>
         <br><br>
         <p style = "text-align:center">Made With </p>
