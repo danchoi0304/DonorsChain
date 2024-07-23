@@ -102,7 +102,7 @@ html_content = """
 
     <!-- Links with styles applied -->
     <ul>
-        <li><a href="donor_SH.html">Donor Information</a></li>
+        <li><a href="donor_SK.html">Donor Information</a></li>
     </ul>
 
     <div style="margin-top: 20px; font-size: 0.9em; color: #6e7f80; text-align:center">
