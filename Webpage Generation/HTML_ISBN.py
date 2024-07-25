@@ -31,7 +31,7 @@ ISBN_list = ISBNs.strip().split()
 
 # Process each ISBN
 for ISBN in ISBN_list:
-    file_path = 'C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\outputs\\book_basic.html'
+    file_path = 'C:\\Users\\danch\\OneDrive\\문서\\GitHub\\DonorsChain\\Webpage Generation\\outputs\\book_basic.html'
     with open(file_path, 'r', encoding='utf-8') as file:
         soup = BeautifulSoup(file, 'html.parser')
 
@@ -51,14 +51,14 @@ for ISBN in ISBN_list:
     with open(output_file_path, 'w', encoding='utf-8') as file:
         file.write(str(soup))
 
-    source = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\" + f'{ISBN}.html'
+    source = "C:\\Users\\danch\\OneDrive\\문서\\GitHub\\DonorsChain\\Webpage Generation\\" + f'{ISBN}.html'
     
     # Destination path 
-    destination = "C:\\Users\\danch\\OneDrive\\바탕 화면\\DonorsChain\\Webpage Generation\\outputs\\" + donor + "\\" + f'{ISBN}.html'
+    destination = "C:\\Users\\danch\\OneDrive\\문서\\GitHub\\DonorsChain\\Webpage Generation\\outputs\\" + donor
 
     # If the destination file already exists, remove it
-    if os.path.exists(destination):
-        os.remove(destination)
+    if os.path.exists(destination + "\\" + f'{ISBN}.html'):
+        os.remove(destination + "\\" + f'{ISBN}.html')
 
     shutil.move(source, destination)
 
